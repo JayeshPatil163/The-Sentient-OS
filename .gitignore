@@ -1,0 +1,37 @@
+# --- OS / IDE Files ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.log
+
+# --- Environment Secrets ---
+.env
+.env.local
+.env.*.local
+
+# --- Node / Frontend (Vite) ---
+**/node_modules/
+**/dist/
+**/.vercel/
+.eslintcache
+
+# --- Python / Backend ---
+**/__pycache__/
+**/*.py[cod]
+**/*.$py.class
+**/.pytest_cache/
+**/.ipynb_checkpoints/
+**/venv/
+**/env/
+**/.venv/
+
+# --- Docker ---
+.dockerignore
+
+# --- Data & Models ---
+# Uncomment if you want to keep the large .joblib files out of Git
+# **/predictive_engine/*.joblib
+**/data/*.csv
+**/data/*.gwf
