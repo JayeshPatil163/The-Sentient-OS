@@ -124,13 +124,13 @@ const Index = () => {
       <div className="bg-gradient-to-r from-primary to-accent py-8 px-6 shadow-lg">
         <div className="container mx-auto">
           <div className="flex items-center gap-3 mb-2">
-            <Cpu className="h-8 w-8 text-primary-foreground" />
+            <img src="../public/Sentient_OS.png" alt="" className="h-8 w-8 text-primary-foreground" />
             <h1 className="text-3xl font-bold text-primary-foreground">
               CPU Scheduling Simulator
             </h1>
           </div>
           <p className="text-primary-foreground/90 text-sm">
-            Compare AI-powered and traditional scheduling algorithms
+            Compare ADRR and traditional scheduling algorithms
           </p>
         </div>
       </div>
