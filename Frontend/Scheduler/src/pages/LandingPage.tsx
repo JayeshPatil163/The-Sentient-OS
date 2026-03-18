@@ -14,8 +14,8 @@ const LandingPage = () => {
           className="max-w-3xl mx-auto bg-white rounded-[40px] p-12 shadow-sm border border-black/5"
         >
           <div className="flex justify-center mb-6">
-            <div className="w-12 h-12 bg-black rounded-full flex items-center justify-center">
-              <img src="../public/Sentient_OS.png" alt="" className="text-white w-6 h-6" />
+            <div className="rounded-full flex items-center justify-center">
+              <img src="../public/Sentient_OS.png" alt="" className="text-white w-16 h-16" />
             </div>
           </div>
           
@@ -33,6 +33,17 @@ const LandingPage = () => {
           >
             Launch Simulator <ArrowRight size={18} />
           </button>
+
+          
+
+          <button 
+            onClick={() => navigate('/system-dashboard')}
+            className="bg-gray-900 text-white mt-10 px-8 py-4 rounded-full font-medium flex items-center gap-2 mx-auto hover:bg-gray-800 transition-all"
+          >
+            Launch scheduling engine <ArrowRight size={18} />
+          </button>
+
+          <span className="text-sm text-gray-500 mb-10 mt-5 max-w-xl mx-auto">Introducing scheduling engine which schedules processes in real time to provide Comparison</span>
         </motion.div>
       </section>
 

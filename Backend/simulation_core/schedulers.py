@@ -1,5 +1,7 @@
 from collections import deque
 import copy
+import time as t
+
 
 def run_simulation(scheduler_class, processes, **kwargs):
     processes_copy = copy.deepcopy(processes)
@@ -60,6 +62,7 @@ class RoundRobinScheduler:
 
             current_process.remaining_time -= exec_time
             time += exec_time
+            t.sleep(0.005)
 
             while self.processes and self.processes[0].arrival_time <= time:
                 self.ready_queue.append(self.processes.pop(0))
@@ -163,6 +166,7 @@ class ADRRScheduler:
             )
             current_process.remaining_time -= exec_time
             time += exec_time
+            t.sleep(0.005)
 
             while self.processes and self.processes[0].arrival_time <= time:
                 self.ready_queue.append(self.processes.pop(0))

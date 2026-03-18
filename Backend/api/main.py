@@ -87,8 +87,20 @@ async def simulate_scheduling(request: SimulationRequest):
         sjf_results = run_simulation(SJFScheduler, sim_processes)
         results.append(sjf_results)
 
+
+    execution_log = []
+
+    for res in results:
+        for seg in res["Gantt Chart"]:
+            execution_log.append({
+                "pid": seg["pid"],
+                "start": seg["start"],
+                "end": seg["end"]
+        })
+
     return {
         "status": "success",
         "results": results,
-        "predictions": predicted_bursts.tolist()
+        "predictions": predicted_bursts.tolist(),
+        "execution_log": execution_log
     }

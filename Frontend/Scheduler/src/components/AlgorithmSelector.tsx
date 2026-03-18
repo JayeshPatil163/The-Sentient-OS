@@ -64,12 +64,12 @@ export const AlgorithmSelector = ({
             )}
           </div>
 
-          <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted/50 transition-colors">
+          {/* <div className="flex items-center space-x-3 p-3 rounded-lg hover:bg-muted/50 transition-colors">
             <Checkbox value="SJF" id="sjf" checked={selectedAlgorithms.includes("SJF")} onCheckedChange={() => toggleAlgorithm("SJF")} />
             <Label htmlFor="sjf" className="cursor-pointer flex-1 font-medium">
               Shortest Job First (SJF)
             </Label>
-          </div>
+          </div> */}
       </div>
     </div>
   );
