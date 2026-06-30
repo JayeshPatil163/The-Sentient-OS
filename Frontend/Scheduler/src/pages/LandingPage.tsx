@@ -43,7 +43,7 @@ const LandingPage = () => {
             Launch scheduling engine <ArrowRight size={18} />
           </button>
 
-          <span className="text-sm text-gray-500 mb-10 mt-5 max-w-xl mx-auto">Introducing scheduling engine which schedules processes in real time to provide Comparison</span>
+          <span className="text-sm text-gray-500 mb-10 mt-10 max-w-xl mx-auto">Introducing scheduling engine which schedules processes in real time to provide Comparison</span>
         </motion.div>
       </section>
 

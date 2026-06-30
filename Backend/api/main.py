@@ -8,6 +8,8 @@ import os
 from simulation_core.process import Process
 from simulation_core.schedulers import run_simulation, RoundRobinScheduler, ADRRScheduler, SJFScheduler
 from typing import Optional
+# v2: classification-based scheduling (new model, isolated from v1)
+from api.v2_router import router as v2_router
 
 app = FastAPI()
 
@@ -23,6 +25,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Mount the v2 router — all v2 endpoints live under /v2
+app.include_router(v2_router, prefix="/v2")
 
 class ProcessInput(BaseModel):
     pid: int
