@@ -34,16 +34,26 @@ const LandingPage = () => {
             Launch Simulator <ArrowRight size={18} />
           </button>
 
-          
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
+            <button 
+              onClick={() => navigate('/system-dashboard')}
+              className="bg-gray-900 text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 mx-auto hover:bg-gray-800 transition-all text-sm"
+            >
+              Scheduling Engine (v1) <ArrowRight size={16} />
+            </button>
 
-          <button 
-            onClick={() => navigate('/system-dashboard')}
-            className="bg-gray-900 text-white mt-10 px-8 py-4 rounded-full font-medium flex items-center gap-2 mx-auto hover:bg-gray-800 transition-all"
-          >
-            Launch scheduling engine <ArrowRight size={18} />
-          </button>
+            <button 
+              onClick={() => navigate('/system-dashboard-v2')}
+              className="text-white px-6 py-3 rounded-full font-medium flex items-center gap-2 mx-auto transition-all text-sm shadow-lg"
+              style={{ background: 'linear-gradient(135deg, #7C3AED, #3B82F6)' }}
+            >
+              ⚡ AI Scheduling Engine (v2) <ArrowRight size={16} />
+            </button>
+          </div>
 
-          <span className="text-sm text-gray-500 mb-10 mt-10 max-w-xl mx-auto">Introducing scheduling engine which schedules processes in real time to provide Comparison</span>
+          <span className="text-sm text-gray-500 mb-10 mt-4 max-w-xl mx-auto block">
+            v2 uses a classification model to categorize processes and schedule across multi-core CPUs with category affinity
+          </span>
         </motion.div>
       </section>
 

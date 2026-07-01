@@ -8,6 +8,7 @@ import IndexV2 from "./pages/IndexV2";
 import LandingPage from "./pages/LandingPage";
 import NotFound from "./pages/NotFound";
 import SystemDashboard from "./pages/SystemDashboard.tsx";
+import SystemDashboardV2 from "./pages/SystemDashboardV2";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/simulator" element={<Index />} />
           <Route path="/v2" element={<IndexV2 />} />
           <Route path="/system-dashboard" element={<SystemDashboard />} />
+          <Route path="/system-dashboard-v2" element={<SystemDashboardV2 />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
